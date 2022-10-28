@@ -55,7 +55,6 @@
     <div class="col-8">
       <app-data-list
         [dataList]="usersList"
-        [dataRow]="currentUser"
         (selectClick)="userSelect($event)"
         (updateClick)="userUpdate($event)"
         (deleteClick)="userRemove($event)"

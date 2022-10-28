@@ -8,22 +8,21 @@ import { User } from '../../model/user';
 })
 export class DataListComponent implements OnInit {
   @Input() dataList: User[] = [];
-  @Input() dataRow: User = new User();
 
   @Output() selectClick: EventEmitter<User> = new EventEmitter();
   @Output() updateClick: EventEmitter<User> = new EventEmitter();
   @Output() deleteClick: EventEmitter<User> = new EventEmitter();
 
-  onSelectClick(): void {
-    this.selectClick.emit(this.dataRow);
+  onSelectClick(user: User): void {
+    this.selectClick.emit(user);
   }
 
-  onUpdateClick(): void {
-    this.updateClick.emit(this.dataRow);
+  onUpdateClick(user: User): void {
+    this.updateClick.emit(user);
   }
 
-  onDeleteClick(): void {
-    this.deleteClick.emit(this.dataRow);
+  onDeleteClick(user: User): void {
+    this.deleteClick.emit(user);
   }
 
   constructor() {}

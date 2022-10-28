@@ -12,9 +12,9 @@
     <app-data-row
       *ngFor="let row of dataList"
       [dataRow]="row"
-      (selectClick)="onSelectClick()"
-      (updateClick)="onUpdateClick()"
-      (deleteClick)="onDeleteClick()"
+      (selectClick)="onSelectClick(row)"
+      (updateClick)="onUpdateClick(row)"
+      (deleteClick)="onDeleteClick(row)"
     ></app-data-row>
   </div>
 </div>
